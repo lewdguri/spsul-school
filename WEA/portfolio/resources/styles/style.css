@@ -1,0 +1,179 @@
+:root {
+    --text: #e8dbf5;
+    --background: #0a0410;
+    --primary: #672ca5;
+    --secondary: #12071c;
+    --accent: #7632bd;
+    
+}
+
+* {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--text);
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+    background-color: var(--background);
+}
+
+.section {
+    font-size: large;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.content{
+    background-color: var(--secondary);
+    height: fit-content;
+    width: 95%;
+    border: 1px solid var(--accent);
+    border-radius: 4px;     
+}
+
+.header {
+    font-size: larger;
+}
+
+.header img {
+    height: 15rem;
+    width: 15rem;
+    transition: transform .7s ease-in-out;
+}
+
+.header img:hover {
+    transform: rotate(360deg);
+}
+
+a {
+    text-decoration: none;
+}
+
+.github {
+    color: orangered
+}
+
+.steam {
+    color: #2a475e;
+}
+
+.itchio {
+    color: lightcoral;
+}
+
+.source {
+    color: lightsalmon
+}
+
+.glow:hover {
+    color: var(--accent);
+    text-shadow:0px 0px 30px var(--accent);
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+
+.project-container {
+    display: flex;
+    flex-direction: column;
+
+    border-top: 1px solid var(--primary);
+    border-bottom: 1px solid var(--primary);
+}
+
+.project-holder {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.zazu {
+    width: 300px;
+    height: 300px;
+    margin: 30px;
+}
+
+.project-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 10rem;
+    min-height: 12rem;
+
+    border: 1px solid var(--accent);
+    border-radius: 4px;
+    margin: 10px;
+}
+
+.project-item img {
+    max-width: 256px;
+    max-height: 256px;
+
+    margin: 5px;
+}
+
+.contact * {
+    text-align: left;
+    margin: 10px;
+}
+
+.name input, .email input, .text textarea {
+    background-color: var(--secondary);
+    padding: 10px;
+    border: 1px solid var(--accent);
+    border-radius: 20px;
+}
+
+.submit {
+    color: var(--text);
+    background-color: var(--accent);
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+.submit:hover {
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+    cursor: pointer;
+}
+
+.footer {
+    width: 100%;
+    height: fit-content;
+    background-color: var(--secondary);
+}
+
+.heading {
+    text-align: center;
+}
+
+.device {
+    border-bottom: 1px solid var(--primary);
+}
+
+@media only screen and (min-width: 901px) {
+    .device h1::after {
+        content: "Large Device 🖥️"
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .device h1::after {
+        content: "Small Device 📲"
+    }
+}
